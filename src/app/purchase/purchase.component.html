@@ -1,9 +1,7 @@
-<div class="m-auto w-1/3">
-  <app-purchase-card class="block" [data]="purchase$ | async"></app-purchase-card>
-  <p class="mt-4 mb-8">
-    For further information please check the
-    <a class="text-blue-700 font-medium" href="#">guide on Cashin vouchers</a>
-  </p>
-  <h2 class="mb-2 text-lg font-bold">Find a location</h2>
-  <app-venues [data]="venues$ | async"></app-venues>
-</div>
+<app-purchase-card class="block" [data]="purchase$ | async"></app-purchase-card>
+<p class="mt-4 mb-8">
+  For further information please check the
+  <a class="text-blue-700 font-medium" href="#">guide on Cashin vouchers</a>
+</p>
+<h2 class="mb-2 text-lg font-bold">Find a location</h2>
+<app-venues [data]="venues$ | async"></app-venues>

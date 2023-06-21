@@ -8,21 +8,27 @@ import { environment } from 'src/environments/environment.development';
 import { API_BASE_URL } from './api-base-url.token';
 import { PurchaseCardComponent } from './purchase-card/purchase-card.component';
 import { VenuesComponent } from './venues/venues.component';
+import { PurchaseStatusComponent } from './purchase-status/purchase-status.component';
+
+import { SpinnerModule } from '../components/spinner/spinner.module';
 
 const routes: Route[] = [
-  { path: '', component: PurchaseComponent }
+  { path: '', component: PurchaseComponent },
+  { path: 'status', component: PurchaseStatusComponent }
 ];
 
 @NgModule({
   declarations: [
     PurchaseComponent,
     PurchaseCardComponent,
-    VenuesComponent
+    VenuesComponent,
+    PurchaseStatusComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     HttpClientModule,
+    SpinnerModule
   ],
   providers: [
     DataAccessService,

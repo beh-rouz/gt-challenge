@@ -10,11 +10,13 @@
     You will receive your QR code in the next step and will be also e-mailed to
     <span class="font-bold">{{ data.userEmail }}</span>!
   </div>
-  <button type="button" class="block w-full bg-yellow-400 font-bold text-center p-2 mt-2 uppercase">
+  <a routerLink="status" class="block w-full bg-yellow-400 font-bold text-center p-2 mt-2 uppercase">
     purchase voucher
-  </button>
+  </a>
 </div>
 
 <ng-template #loading>
-  <div class="">loading purchase card data...</div>
+  <div class="bg-gray-200 h-56 animate-pulse flex items-center justify-center">
+    <app-spinner></app-spinner>
+  </div>
 </ng-template>
