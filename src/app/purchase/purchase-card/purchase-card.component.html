@@ -1,1 +1,10 @@
-<p>purchase-card works!</p>
+<div class="border bg-gray" *ngIf="data">
+  <div class="">{{ data.voucherAmount }}</div>
+  <div>Cash in voucher</div>
+  <div class="">valid for:</div>
+  <div class="">{{ data.expiresAt }}</div>
+  <div>
+    You will receive your QR code in the next step and will be also e-mailed to
+    <span>{{ data.userEmail }}</span>!
+  </div>
+</div>

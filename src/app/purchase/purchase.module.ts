@@ -7,6 +7,7 @@ import { DataAccessService } from './data-access.service';
 import { environment } from 'src/environments/environment.development';
 import { API_BASE_URL } from './api-base-url.token';
 import { PurchaseCardComponent } from './purchase-card/purchase-card.component';
+import { VenuesComponent } from './venues/venues.component';
 
 const routes: Route[] = [
   { path: '', component: PurchaseComponent }
@@ -15,7 +16,8 @@ const routes: Route[] = [
 @NgModule({
   declarations: [
     PurchaseComponent,
-    PurchaseCardComponent
+    PurchaseCardComponent,
+    VenuesComponent
   ],
   imports: [
     CommonModule,

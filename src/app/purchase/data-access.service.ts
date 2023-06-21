@@ -16,7 +16,7 @@ export class DataAccessService {
     return this._http.get<Response<Venues>>(`${this._apiBaseUrl}/b/631aee46a1610e63862444c0`);
   }
 
-  purchase() {
+  getPurchaseData() {
     return this._http.get<Response<Purchase>>(`${this._apiBaseUrl}/b/6311b2fde13e6063dc979a31`);
   }
 }
