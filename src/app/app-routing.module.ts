@@ -5,7 +5,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'purchase', pathMatch: 'full' },
   { 
     path: 'purchase', loadChildren: () => 
-    import('./purchase/purchase.module').then(m => m.PurchaseModule) 
+      import('./purchase/purchase.module').then(m => m.PurchaseModule) 
   }
 ];
 
