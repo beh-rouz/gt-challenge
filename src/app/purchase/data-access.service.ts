@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { API_BASE_URL } from './api-base-url.token';
+import { API_BASE_URL } from '../api-base-url.token';
 import { Response, Purchase, Venues } from '../interfaces';
 
 @Injectable()
