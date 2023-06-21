@@ -10,14 +10,14 @@ import { Purchase, Venues } from '../interfaces';
 })
 export class PurchaseComponent implements OnInit {
     
-  purchaseData$: Observable<Purchase>;
+  purchase$: Observable<Purchase>;
   venues$: Observable<Venues>;
 
   constructor(
     private _dataAccessService: DataAccessService
   ) {
     
-    this.purchaseData$ = this._dataAccessService.getPurchaseData()
+    this.purchase$ = this._dataAccessService.getPurchaseData()
       .pipe(
         map(res => res.record)
       );

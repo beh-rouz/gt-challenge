@@ -1,1 +1,26 @@
-<p>venues works!</p>
+<div *ngIf="data else loading">
+  <table class="min-w-full border-collapse border text-sm">
+    <thead class="text-left">
+      <tr class="bg-gray-100">
+        <th class="border p-4">Name & address</th>
+        <th class="border p-4">Opening hours</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let venue of data.venues">
+        <td class="border py-2 px-4">
+          <div class="font-bold">{{ venue.name }}</div>
+          <div>{{ venue.address }}, {{ venue.city }}</div>
+          <div>
+            <a class="text-blue-700 font-medium" [href]="getMapLink(venue)">View on map</a>
+          </div>
+        </td>
+        <td class="border py-2 px-4">{{ venue.hours }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #loading>
+  <div class="">loading venues...</div>
+</ng-template>

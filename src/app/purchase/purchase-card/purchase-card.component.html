@@ -1,10 +1,20 @@
-<div class="border bg-gray" *ngIf="data">
-  <div class="">{{ data.voucherAmount }}</div>
-  <div>Cash in voucher</div>
-  <div class="">valid for:</div>
-  <div class="">{{ data.expiresAt }}</div>
+<div class="border bg-gray p-4 text-center bg-gray-100" *ngIf="data else loading">
+  <div class="text-4xl font-bold first-letter:pr-1.5">{{ data.voucherAmount | currency:data.currency }}</div>
+  <div class="font-bold">Cash in voucher</div>
   <div>
-    You will receive your QR code in the next step and will be also e-mailed to
-    <span>{{ data.userEmail }}</span>!
+    <span class="font-bold text-gray-500">Valid for: </span>
+    <!-- todo: use a custom pipe for calculating time difference here for expire date -->
+    <span class="">{{ data.expiresAt | date }}</span>
   </div>
+  <div class="italic mt-6">
+    You will receive your QR code in the next step and will be also e-mailed to
+    <span class="font-bold">{{ data.userEmail }}</span>!
+  </div>
+  <button type="button" class="block w-full bg-yellow-400 font-bold text-center p-2 mt-2 uppercase">
+    purchase voucher
+  </button>
 </div>
+
+<ng-template #loading>
+  <div class="">loading purchase card data...</div>
+</ng-template>
